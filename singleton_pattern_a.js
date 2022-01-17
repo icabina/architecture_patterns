@@ -1,9 +1,9 @@
 import FancyLogger from "./singleton_pattern_c.js";
-
-const logger = new FancyLogger();
+import loggerSingleton from "./singleton_pattern_c.js";
+//const logger = new FancyLogger();
 
 export default function a() {
-  logger.printLogCount();
-  logger.log("a File");
-  logger.printLogCount();
+  loggerSingleton.printLogCount();
+  loggerSingleton.log("a File");
+  loggerSingleton.printLogCount();
 }

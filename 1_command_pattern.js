@@ -1,6 +1,6 @@
 "use strict";
 //===========================================
-console.log("COMMAND PATTERN");
+
 //===========================================
 export class Calculator {
   constructor() {

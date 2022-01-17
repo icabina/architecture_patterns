@@ -12,8 +12,12 @@ import * as builderPattern from "./2_builder_pattern.js";
 import a from "./singleton_pattern_a.js";
 import b from "./singleton_pattern_b.js";
 //====================================================
-console.log("================================");
 //===========================================
+//===========================================
+//===========================================
+//===========================================
+console.log("================================");
+console.log("COMMAND PATTERN");
 const calculator = new Calculator();
 //calculator.executeCommand(new AddCommand(10));
 //calculator.executeCommand(new MultiplyCommand(2));
@@ -22,7 +26,9 @@ console.log(calculator.value);
 calculator.undo();
 console.log(calculator.value);
 //===========================================
+//===========================================
 console.log("================================");
+console.log("BUILDER PATTERN");
 const user1 = new builderPattern.User("Rellath");
 console.log(user1);
 
@@ -44,8 +50,9 @@ let usuario = new builderPattern.Usuario("Jorge", {
 console.log(usuario);
 //====================================================
 console.log("================================");
+console.log("SINGLETON PATTERN");
+a();
+b();
 //====================================================
 console.log("================================");
 //====================================================
-a();
-b();

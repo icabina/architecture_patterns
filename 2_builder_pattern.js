@@ -1,6 +1,5 @@
 "use strict";
-//===========================================
-console.log("BUILDER PATTERN");
+
 //===========================================
 export class Address {
   constructor(zip, street) {
