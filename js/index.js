@@ -56,3 +56,9 @@ b();
 //====================================================
 console.log("================================");
 //====================================================
+console.log("LINKED LIST");
+const LinkedList = require("./LinkedList");
+
+const ll = new LinkedList();
+ll.insertAtHead(10);
+ll.insertAtHead(20);
