@@ -5,17 +5,18 @@ import {
   MultiplyCommand,
   DivideCommand,
   AddThenMultiplyCommand,
-} from "./1_command_pattern.js";
+} from "./js/1_command_pattern.js";
+import { LinkedList } from "./js/LinkedList.js";
 //====================================================
-import * as builderPattern from "./2_builder_pattern.js";
+import * as builderPattern from "./js/2_builder_pattern.js";
 //====================================================
-import a from "./singleton_pattern_a.js";
-import b from "./singleton_pattern_b.js";
+import a from "./js/singleton_pattern_a.js";
+import b from "./js/singleton_pattern_b.js";
 //====================================================
-//===========================================
-//===========================================
-//===========================================
-//===========================================
+//
+//
+//
+//
 console.log("================================");
 console.log("COMMAND PATTERN");
 const calculator = new Calculator();
@@ -25,8 +26,10 @@ calculator.executeCommand(new AddThenMultiplyCommand(10, 2));
 console.log(calculator.value);
 calculator.undo();
 console.log(calculator.value);
-//===========================================
-//===========================================
+//
+//
+//
+//
 console.log("================================");
 console.log("BUILDER PATTERN");
 const user1 = new builderPattern.User("Rellath");
@@ -48,6 +51,11 @@ let usuario = new builderPattern.Usuario("Jorge", {
   address: new builderPattern.Address("2", "main street"),
 });
 console.log(usuario);
+//
+//
+//
+//
+//TEST
 //====================================================
 console.log("================================");
 console.log("SINGLETON PATTERN");
@@ -57,8 +65,11 @@ b();
 console.log("================================");
 //====================================================
 console.log("LINKED LIST");
-const LinkedList = require("./LinkedList");
+//https://www.youtube.com/watch?v=gJjPWA8wpQg&list=PLqvAK737mI8lLZpbbWZa6EvnatRn8tTce&index=6&t=587s
 
 const ll = new LinkedList();
 ll.insertAtHead(10);
 ll.insertAtHead(20);
+ll.insertAtHead(21);
+ll.insertAtHead(25);
+console.log(ll);
