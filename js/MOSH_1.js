@@ -1,10 +1,12 @@
 /*DESIGN PATTERNS:
 1. CREATIONAL*/
+
 //================================================
-//factory function
+//factory function, using return OBJECT
 //camel notation
 function createCircle(radius) {
   return {
+    //returns an object
     radius,
     draw() {
       console.log("draw");
@@ -13,10 +15,11 @@ function createCircle(radius) {
 }
 
 const myCircle = createCircle(1);
-//asi se crea un nuevo con factory function
+console.log(myCircle);
+//asi se crea un nuevo objeto con factory function
 // se retorna el object
 //================================================
-//Constructor function
+//Constructor function, using this, and NEW
 //pascal notation
 function Circle(radius) {
   //this is empty object
@@ -25,7 +28,8 @@ function Circle(radius) {
     console.log("draw");
   };
 }
-const circle = new Circle(1);
+const circle = new Circle(7);
+console.log(circle);
 // points this to circle
 
 //================================================
