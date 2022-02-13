@@ -84,5 +84,13 @@ ll.insertAtHead(25); */
 const ll = LinkedList.fromValues(10, 20, 30, 40);
 ll.print();
 // console.log(ll);
-console.log(ll.getByIndex(2).value); //30
+// console.log(ll.getByIndex(2).value); //30
+
+ll.insertAtIndex(2, 60);
+ll.print();
+ll.removeHead();
+ll.print();
+ll.removeAtIndex(2);
+ll.print();
+
 console.log("================================");

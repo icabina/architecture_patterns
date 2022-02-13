@@ -22,7 +22,7 @@ export class LinkedList {
     this.head = newNode;
     this.length++;
   }
-
+  //======================
   getByIndex(index) {
     //Edge cases
     if (index < 0 || index >= this.length) return null;
@@ -33,7 +33,7 @@ export class LinkedList {
     }
     return current;
   }
-
+  //======================
   insertAtIndex(index, value) {
     if (index === 0) return this.insertAtHead(index);
 
@@ -43,7 +43,22 @@ export class LinkedList {
     prev.next = new LinkedListNode(value, prev.next);
     this.length++;
   }
+  //======================
+  removeHead() {
+    this.head = this.head.next;
+    this.length--;
+  }
+  //======================
+  removeAtIndex(index) {
+    if (index === 0) return this.removeHead(index);
 
+    const prev = this.getByIndex(index - 1);
+    if (prev == null) return null;
+
+    prev.next = prev.next.next;
+    this.length--;
+  }
+  //======================
   print() {
     let output = "";
     let current = this.head;

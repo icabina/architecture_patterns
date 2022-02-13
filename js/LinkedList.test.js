@@ -13,6 +13,7 @@ describe("#insertAtHead", () => {
   });
 });
 //=====================================================
+//get
 describe("#getByIndex", () => {
   describe("with index less than 0", () => {
     test("it returns null", () => {
@@ -46,6 +47,7 @@ describe("#getByIndex", () => {
   });
 });
 //=====================================================
+//insert
 describe("#insertAtIndex", () => {
   describe("with index less than 0", () => {
     test("it does not insert anything", () => {
@@ -79,6 +81,58 @@ describe("#insertAtIndex", () => {
       expect(node.value).toBe(30);
       expect(node.next.value).toBe(40);
       expect(ll.length).toBe(5);
+    });
+  });
+});
+
+//=====================================================
+//remove head
+describe("#removes", () => {
+  describe("should remove head", () => {
+    test("at head", () => {
+      const ll = LinkedList.fromValues(10, 20, 30);
+      ll.removeHead();
+      expect(ll.head.value).toBe(20);
+      expect(ll.length).toBe(2);
+    });
+  });
+});
+//=====================================================
+//remove index
+describe("removes index", () => {
+  describe("with index less than 0", () => {
+    test("it does not remove anything", () => {
+      const ll = LinkedList.fromValues(10, 20);
+      ll.removeAtIndex(-1);
+      expect(ll.length).toBe(2);
+    });
+  });
+  describe("if index is greater than length of list", () => {
+    test("it does not remove anything", () => {
+      const ll = LinkedList.fromValues(10, 20);
+      ll.removeAtIndex(ll.length + 1);
+      expect(ll.length).toBe(2);
+    });
+  });
+
+  describe("with index 0", () => {
+    test("it should remove at the head", () => {
+      const ll = LinkedList.fromValues(10, 20, 30);
+      ll.removeAtIndex(0);
+      expect(ll.head.value).toBe(20);
+      expect(ll.head.next.value).toBe(30);
+      expect(ll.length).toBe(2);
+    });
+  });
+
+  describe("with index in the middle", () => {
+    test("it should remove", () => {
+      const ll = LinkedList.fromValues(10, 20, 30, 40);
+      ll.removeAtIndex(0);
+      const node = ll.getByIndex(0);
+      expect(node.value).toBe(20);
+      expect(node.next.value).toBe(30);
+      expect(ll.length).toBe(3);
     });
   });
 });
