@@ -62,14 +62,27 @@ console.log("SINGLETON PATTERN");
 a();
 b();
 //====================================================
+//
+//
+//
+//
+//
+//
+//
+//
 console.log("================================");
 //====================================================
 console.log("LINKED LIST");
 //https://www.youtube.com/watch?v=gJjPWA8wpQg&list=PLqvAK737mI8lLZpbbWZa6EvnatRn8tTce&index=6&t=587s
 
-const ll = new LinkedList();
+/* const ll = new LinkedList();
 ll.insertAtHead(10);
 ll.insertAtHead(20);
 ll.insertAtHead(21);
-ll.insertAtHead(25);
-console.log(ll);
+ll.insertAtHead(25); */
+
+const ll = LinkedList.fromValues(10, 20, 30, 40);
+ll.print();
+// console.log(ll);
+console.log(ll.getByIndex(2).value); //30
+console.log("================================");
